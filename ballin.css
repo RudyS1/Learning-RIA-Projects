@@ -1,0 +1,49 @@
+body{
+  min-width:100%;
+  min-height:100%;
+  margin:0;
+  background-color:white;
+}
+
+body *{position:relative;}
+
+.bouncingBall{
+  width:100px;
+  height:100px;
+  border-radius: 50px;
+  position:fixed;
+  left:25%;
+  bottom:70%;
+  background-color:rgb(27,187,234);
+  transition: bottom 1s ease-in-out; 
+}
+
+.bouncingBall:hover{
+  bottom:0%;
+}
+
+.bouncingBallAnim{
+  width:100px;
+  height:100px;
+  border-radius: 50px;
+  position:fixed;
+  left:75%;
+  bottom:70%;
+  background-color:rgb(27,187,234);
+  animation:bounce 3s infinite;
+  -webkit-animation:bounce 3s infinite; /* Safari and Chrome */
+}
+
+@keyframes bounce
+{
+0% {bottom:70%;}
+50% {bottom:0%;}
+100% {bottom:70%;}
+}
+
+@-webkit-keyframes bounce /* Safari and Chrome */
+{
+0% {bottom:70%;}
+50% {bottom:0%;}
+100% {bottom:70%;}
+}
